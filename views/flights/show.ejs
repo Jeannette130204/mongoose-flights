@@ -9,15 +9,26 @@
 </head>
 <body>
     <section>
-        <div>Airline: </div>
-        <div><%= flight.airline %></div>
-        <div>Airport: </div>
-        <div><%= flight.airport %></div>
-        <div>Flight Number: </div>
-        <div><%= flight.flightNo %></div>
-        <div>Departure Date: </div>
-        <div><%= flight.departs %></div>
+        <div>Airline: <%= flight.airline %></div><br>
+        <div>Airport: <%= flight.airport %></div><br>
+        <div>Flight Number: <%= flight.flightNo %></div><br>
+        <div>Departure Date: <%= flight.departs %></div><br>
     </section>
+    <form action="/flights" method="POST">
+    <label>Destination Airport:
+        <select name="Destination airport">
+            <option value="AUS">AUS</option>
+            <option value="DFW">DFW</option>
+            <option value="DEN">DEN</option>
+            <option value="LAX">LAX</option>
+            <option value="SAN">SAN</option>
+        </select><br><br>
+    <label>Arrival time:
+        <input type="datetime-local" name="departs">
+    </label>
+</label><br><br>
+<input type="submit" value="add to destination">
+</form>
 
 
         
