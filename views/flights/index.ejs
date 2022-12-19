@@ -10,9 +10,10 @@
     <table id="list">
         <thead>
           <tr>
-            <th>Title</th>
-            <th>Release<br>Year</th>
-            <th></th>
+            <th>Airline</th>
+            <th>Airport</th>
+            <th>Flight <br>Number</th>
+            <th>Departs</th>
           </tr>
         </thead>
         <tbody>
@@ -24,9 +25,20 @@
               <td>
                 <%= f.airport %>
               </td>
+              <td>
+                <%= f.flightNo %>
+              </td>              <td>
+                <%= f.departs %>
+              </td>
+            </td>              <td>
+                <a href="/flights/<%= f._id %>">Details</a>
+              </td>
+
             </tr>
             <% }); %>
         </tbody>
+
       </table>
+      <a href="flights/new">Add flights</a>
 </body>
 </html>
