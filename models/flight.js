@@ -2,12 +2,12 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const destinationSchema = new Schema({
-    airport:{
+    airportD:{
         type:String,
         enum: ['AUS', 'DFW', 'DFW', 'DEN', 'LAX', 'SAN']
     },
     arrival:{
-        type: Date
+        type: String
     }
 })
 
